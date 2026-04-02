@@ -1,0 +1,60 @@
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Infrastructure.deps.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Infrastructure.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Infrastructure.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.AssemblyInfoInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.AssemblyInfo.cs
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\refint\Catalog.Infrastructure.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\ref\Catalog.Infrastructure.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Application.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Application.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Core.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.csproj.AssemblyReference.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog..168C4A48.Up2Date
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Data\SeedData\brands.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Data\SeedData\products.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Data\SeedData\types.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Data\SeedData\brands.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Data\SeedData\products.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Data\SeedData\types.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Infrastructure.deps.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Infrastructure.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Infrastructure.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Application.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Application.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Core.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.csproj.AssemblyReference.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.AssemblyInfoInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.AssemblyInfo.cs
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog..168C4A48.Up2Date
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\refint\Catalog.Infrastructure.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\ref\Catalog.Infrastructure.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Data\SeedData\brands.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Data\SeedData\products.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Data\SeedData\types.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Infrastructure.deps.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Infrastructure.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Infrastructure.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Application.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Application.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net10.0\Catalog.Core.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.csproj.AssemblyReference.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.AssemblyInfoInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.AssemblyInfo.cs
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog..168C4A48.Up2Date
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\refint\Catalog.Infrastructure.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net10.0\ref\Catalog.Infrastructure.dll

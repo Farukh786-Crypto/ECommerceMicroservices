@@ -1,0 +1,57 @@
+<Solution>
+  <Folder Name="/ApiGateway/">
+    <Project Path="ApiGateway/ApiGateway/ApiGateway.csproj" />
+  </Folder>
+  <Folder Name="/Aspire/">
+    <Project Path="Aspire/Ecommerce.AppHost/Ecommerce.AppHost.csproj" Id="a323a290-1d06-481f-b42a-d35fc13b877f" />
+    <Project Path="Aspire/Ecommerce.ServiceDefaults/Ecommerce.ServiceDefaults.csproj" Id="1c79bb73-e5b3-478f-8eac-bf683f03ce94" />
+  </Folder>
+  <Folder Name="/Deplyments/" />
+  <Folder Name="/Deplyments/helm/" />
+  <Folder Name="/Deplyments/istio/" />
+  <Folder Name="/Deplyments/k8s/" />
+  <Folder Name="/Deplyments/k8s/Basket/" />
+  <Folder Name="/Deplyments/k8s/Catalog/" />
+  <Folder Name="/Deplyments/k8s/Catalog/catalog-api/">
+    <File Path="catalog-api.yaml" />
+  </Folder>
+  <Folder Name="/Deplyments/k8s/Catalog/catalog-db/" />
+  <Folder Name="/Infrastructure/">
+    <Project Path="Infrastructure/Common.Logging/Common.Logging.csproj" />
+    <Project Path="Infrastructure/EventBus.Messages/EventBus.Messages.csproj" />
+  </Folder>
+  <Folder Name="/Services/" />
+  <Folder Name="/Services/Basket/">
+    <Project Path="Services/Basket/Basket.API/Basket.API.csproj" />
+    <Project Path="Services/Basket/Basket.Application/Basket.Application.csproj" />
+    <Project Path="Services/Basket/Basket.Core/Basket.Core.csproj" />
+    <Project Path="Services/Basket/Basket.Infrastructure/Basket.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/Services/Catalog/">
+    <Project Path="Services/Catalog/Catalog.API/Catalog.API.csproj" />
+    <Project Path="Services/Catalog/Catalog.Application/Catalog.Application.csproj" />
+    <Project Path="Services/Catalog/Catalog.Core/Catalog.Core.csproj" />
+    <Project Path="Services/Catalog/Catalog.Infrastructure/Catalog.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/Services/Discount/">
+    <Project Path="Services/Discount/Discount.API/Discount.API.csproj" />
+    <Project Path="Services/Discount/Discount.Application/Discount.Application.csproj" />
+    <Project Path="Services/Discount/Discount.Core/Discount.Core.csproj" />
+    <Project Path="Services/Discount/Discount.Infrastructure/Discount.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/Services/Identity/">
+    <Project Path="Services/Identity/Identity/Identity.csproj" />
+  </Folder>
+  <Folder Name="/Services/Ordering/">
+    <Project Path="Services/Ordering/Ordering.API/Ordering.API.csproj" />
+    <Project Path="Services/Ordering/Ordering.Application/Ordering.Application.csproj" />
+    <Project Path="Services/Ordering/Ordering.Core/Ordering.Core.csproj" />
+    <Project Path="Services/Ordering/Ordering.Infrastuctures/Ordering.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/Services/Payment/">
+    <Project Path="Services/Payment/Payment/Payment.csproj" />
+  </Folder>
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
+</Solution>

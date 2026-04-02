@@ -1,0 +1,22 @@
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Basket\Basket.Core\bin\Debug\net10.0\Basket.Core.deps.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Basket\Basket.Core\bin\Debug\net10.0\Basket.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Basket\Basket.Core\bin\Debug\net10.0\Basket.Core.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Basket\Basket.Core\obj\Debug\net10.0\Basket.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Basket\Basket.Core\obj\Debug\net10.0\Basket.Core.AssemblyInfoInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Basket\Basket.Core\obj\Debug\net10.0\Basket.Core.AssemblyInfo.cs
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Basket\Basket.Core\obj\Debug\net10.0\Basket.Core.csproj.CoreCompileInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Basket\Basket.Core\obj\Debug\net10.0\Basket.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Basket\Basket.Core\obj\Debug\net10.0\refint\Basket.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Basket\Basket.Core\obj\Debug\net10.0\Basket.Core.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Basket\Basket.Core\obj\Debug\net10.0\ref\Basket.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Basket\Basket.Core\bin\Debug\net10.0\Basket.Core.deps.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Basket\Basket.Core\bin\Debug\net10.0\Basket.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Basket\Basket.Core\bin\Debug\net10.0\Basket.Core.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Basket\Basket.Core\obj\Debug\net10.0\Basket.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Basket\Basket.Core\obj\Debug\net10.0\Basket.Core.AssemblyInfoInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Basket\Basket.Core\obj\Debug\net10.0\Basket.Core.AssemblyInfo.cs
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Basket\Basket.Core\obj\Debug\net10.0\Basket.Core.csproj.CoreCompileInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Basket\Basket.Core\obj\Debug\net10.0\Basket.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Basket\Basket.Core\obj\Debug\net10.0\refint\Basket.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Basket\Basket.Core\obj\Debug\net10.0\Basket.Core.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Basket\Basket.Core\obj\Debug\net10.0\ref\Basket.Core.dll

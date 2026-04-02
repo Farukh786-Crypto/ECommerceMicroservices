@@ -1,0 +1,16 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "Payment | v1",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:55170"
+    },
+    {
+      "url": "https://localhost:55171"
+    }
+  ],
+  "paths": { }
+}

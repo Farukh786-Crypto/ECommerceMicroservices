@@ -1,0 +1,22 @@
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Ordering\Ordering.Core\bin\Debug\net10.0\Ordering.Core.deps.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Ordering\Ordering.Core\bin\Debug\net10.0\Ordering.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Ordering\Ordering.Core\bin\Debug\net10.0\Ordering.Core.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Ordering\Ordering.Core\obj\Debug\net10.0\Ordering.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Ordering\Ordering.Core\obj\Debug\net10.0\Ordering.Core.AssemblyInfoInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Ordering\Ordering.Core\obj\Debug\net10.0\Ordering.Core.AssemblyInfo.cs
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Ordering\Ordering.Core\obj\Debug\net10.0\Ordering.Core.csproj.CoreCompileInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Ordering\Ordering.Core\obj\Debug\net10.0\Ordering.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Ordering\Ordering.Core\obj\Debug\net10.0\refint\Ordering.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Ordering\Ordering.Core\obj\Debug\net10.0\Ordering.Core.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Ordering\Ordering.Core\obj\Debug\net10.0\ref\Ordering.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Ordering\Ordering.Core\bin\Debug\net10.0\Ordering.Core.deps.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Ordering\Ordering.Core\bin\Debug\net10.0\Ordering.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Ordering\Ordering.Core\bin\Debug\net10.0\Ordering.Core.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Ordering\Ordering.Core\obj\Debug\net10.0\Ordering.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Ordering\Ordering.Core\obj\Debug\net10.0\Ordering.Core.AssemblyInfoInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Ordering\Ordering.Core\obj\Debug\net10.0\Ordering.Core.AssemblyInfo.cs
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Ordering\Ordering.Core\obj\Debug\net10.0\Ordering.Core.csproj.CoreCompileInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Ordering\Ordering.Core\obj\Debug\net10.0\Ordering.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Ordering\Ordering.Core\obj\Debug\net10.0\refint\Ordering.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Ordering\Ordering.Core\obj\Debug\net10.0\Ordering.Core.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Ordering\Ordering.Core\obj\Debug\net10.0\ref\Ordering.Core.dll

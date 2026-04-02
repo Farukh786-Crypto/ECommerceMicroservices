@@ -1,0 +1,79 @@
+services:
+  catalogdb:
+   image: mongo
+
+  basketdb:
+   image: redis:alpine
+
+  discountdb:
+   image: postgres:14
+
+  orderdb:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+
+  identitydb:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+  
+  catalog:
+   image: ${DOCKER_REGISTRY-}catalog
+   build:
+     context: .
+     dockerfile: Services/Catalog/Catalog.API/Dockerfile
+
+
+  basket:
+    image: ${DOCKER_REGISTRY-}basket
+    build:
+      context: .
+      dockerfile: Services/Basket/Basket.API/Dockerfile
+
+  discount:
+    image: ${DOCKER_REGISTRY-}discount
+    build:
+      context: .
+      dockerfile: Services/Discount/Discount.API/Dockerfile
+
+  ordering:
+    image: ${DOCKER_REGISTRY-}orderingapi
+    build:
+      context: .
+      dockerfile: Services/Ordering/Ordering.API/Dockerfile
+
+  payment:
+    image: ${DOCKER_REGISTRY-}payment
+    build:
+      context: .
+      dockerfile: Services/Payment/Payment/Dockerfile
+
+  identity:
+    image: ${DOCKER_REGISTRY-}identity
+    build:
+      context: .
+      dockerfile: Services/Identity/Identity/Dockerfile
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.14.3
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.14.3
+
+  ocelot.apigateway:
+    image: ${DOCKER_REGISTRY-}ocelotapigateway
+    build:
+      context: .
+      dockerfile: ApiGateway/ApiGateway/Dockerfile
+
+volumes:
+ mongo_data:
+ postgres_data:
+ orderdb-data:
+ identitydb-data:
+ elasticsearch-data:
+ 
+
+
+
+

@@ -1,0 +1,36 @@
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Core\bin\Debug\net10.0\Catalog.Core.deps.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Core\bin\Debug\net10.0\Catalog.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Core\bin\Debug\net10.0\Catalog.Core.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.AssemblyInfoInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.AssemblyInfo.cs
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.csproj.CoreCompileInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\refint\Catalog.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\ref\Catalog.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy course code\New\My code\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.csproj.AssemblyReference.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Core\bin\Debug\net10.0\Catalog.Core.deps.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Core\bin\Debug\net10.0\Catalog.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Core\bin\Debug\net10.0\Catalog.Core.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.csproj.AssemblyReference.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.AssemblyInfoInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.AssemblyInfo.cs
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.csproj.CoreCompileInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\refint\Catalog.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\ref\Catalog.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Core\bin\Debug\net10.0\Catalog.Core.deps.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Core\bin\Debug\net10.0\Catalog.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Core\bin\Debug\net10.0\Catalog.Core.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.csproj.AssemblyReference.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.AssemblyInfoInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.AssemblyInfo.cs
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.csproj.CoreCompileInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\refint\Catalog.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\Catalog.Core.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net10.0\ref\Catalog.Core.dll

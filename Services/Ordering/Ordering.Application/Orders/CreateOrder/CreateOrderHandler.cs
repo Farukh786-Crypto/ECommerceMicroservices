@@ -1,0 +1,29 @@
+﻿using Microsoft.Extensions.Logging;
+using Ordering.Application.Abstractions;
+using Ordering.Application.Mappers;
+using Ordering.Core.Repositories;
+
+namespace Ordering.Application.Orders.CreateOrder
+{
+    public class CreateOrderHandler : ICommandHandler<CreateOrderCommand,int>
+    {
+        private readonly IOrderRepository _orderRepository;
+        private readonly ILogger<CreateOrderHandler> _logger;
+        public CreateOrderHandler(IOrderRepository orderRepository, ILogger<CreateOrderHandler> logger)
+        {
+            _orderRepository = orderRepository;
+            _logger = logger;
+        }
+        public async Task<int> Handle(CreateOrderCommand command, CancellationToken cancellationToken)
+        {
+            var orderEntity = command.ToEntity();
+            var generatedOrder = await _orderRepository.AddAsync(orderEntity);
+            // order added outBox message (saga patteren) started here
+            var outboxMessage = OrderMapper.ToOutboxMessage(generatedOrder,command.CorrelationId);
+            //  Save to database so dispatcher can pick it up
+            await _orderRepository.AddOutboxMessageAsync(outboxMessage);
+            _logger.LogInformation($"Order with ID {generatedOrder.Id} succesfully created. with !!!!!! {outboxMessage}");
+            return generatedOrder.Id;
+        }
+    }
+}

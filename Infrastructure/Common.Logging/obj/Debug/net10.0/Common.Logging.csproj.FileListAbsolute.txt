@@ -1,0 +1,24 @@
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Infrastructure\Common.Logging\bin\Debug\net10.0\Common.Logging.deps.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Infrastructure\Common.Logging\bin\Debug\net10.0\Common.Logging.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Infrastructure\Common.Logging\bin\Debug\net10.0\Common.Logging.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Infrastructure\Common.Logging\obj\Debug\net10.0\Common.Logging.csproj.AssemblyReference.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Infrastructure\Common.Logging\obj\Debug\net10.0\Common.Logging.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Infrastructure\Common.Logging\obj\Debug\net10.0\Common.Logging.AssemblyInfoInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Infrastructure\Common.Logging\obj\Debug\net10.0\Common.Logging.AssemblyInfo.cs
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Infrastructure\Common.Logging\obj\Debug\net10.0\Common.Logging.csproj.CoreCompileInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Infrastructure\Common.Logging\obj\Debug\net10.0\Common.Logging.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Infrastructure\Common.Logging\obj\Debug\net10.0\refint\Common.Logging.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Infrastructure\Common.Logging\obj\Debug\net10.0\Common.Logging.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Infrastructure\Common.Logging\obj\Debug\net10.0\ref\Common.Logging.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Infrastructure\Common.Logging\bin\Debug\net10.0\Common.Logging.deps.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Infrastructure\Common.Logging\bin\Debug\net10.0\Common.Logging.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Infrastructure\Common.Logging\bin\Debug\net10.0\Common.Logging.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Infrastructure\Common.Logging\obj\Debug\net10.0\Common.Logging.csproj.AssemblyReference.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Infrastructure\Common.Logging\obj\Debug\net10.0\Common.Logging.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Infrastructure\Common.Logging\obj\Debug\net10.0\Common.Logging.AssemblyInfoInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Infrastructure\Common.Logging\obj\Debug\net10.0\Common.Logging.AssemblyInfo.cs
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Infrastructure\Common.Logging\obj\Debug\net10.0\Common.Logging.csproj.CoreCompileInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Infrastructure\Common.Logging\obj\Debug\net10.0\Common.Logging.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Infrastructure\Common.Logging\obj\Debug\net10.0\refint\Common.Logging.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Infrastructure\Common.Logging\obj\Debug\net10.0\Common.Logging.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Infrastructure\Common.Logging\obj\Debug\net10.0\ref\Common.Logging.dll

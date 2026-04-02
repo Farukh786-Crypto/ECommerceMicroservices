@@ -1,0 +1,34 @@
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Discount\Discount.Infrastructure\bin\Debug\net10.0\Discount.Infrastructure.deps.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Discount\Discount.Infrastructure\bin\Debug\net10.0\Discount.Infrastructure.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Discount\Discount.Infrastructure\bin\Debug\net10.0\Discount.Infrastructure.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Discount\Discount.Infrastructure\bin\Debug\net10.0\Discount.Application.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Discount\Discount.Infrastructure\bin\Debug\net10.0\Discount.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Discount\Discount.Infrastructure\bin\Debug\net10.0\Discount.Application.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Discount\Discount.Infrastructure\bin\Debug\net10.0\Discount.Core.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Discount\Discount.Infrastructure\obj\Debug\net10.0\Discount.Infrastructure.csproj.AssemblyReference.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Discount\Discount.Infrastructure\obj\Debug\net10.0\Discount.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Discount\Discount.Infrastructure\obj\Debug\net10.0\Discount.Infrastructure.AssemblyInfoInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Discount\Discount.Infrastructure\obj\Debug\net10.0\Discount.Infrastructure.AssemblyInfo.cs
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Discount\Discount.Infrastructure\obj\Debug\net10.0\Discount.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Discount\Discount.Infrastructure\obj\Debug\net10.0\Discount.DF031D83.Up2Date
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Discount\Discount.Infrastructure\obj\Debug\net10.0\Discount.Infrastructure.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Discount\Discount.Infrastructure\obj\Debug\net10.0\refint\Discount.Infrastructure.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Discount\Discount.Infrastructure\obj\Debug\net10.0\Discount.Infrastructure.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\Ecommerce\Services\Discount\Discount.Infrastructure\obj\Debug\net10.0\ref\Discount.Infrastructure.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Discount\Discount.Infrastructure\bin\Debug\net10.0\Discount.Infrastructure.deps.json
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Discount\Discount.Infrastructure\bin\Debug\net10.0\Discount.Infrastructure.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Discount\Discount.Infrastructure\bin\Debug\net10.0\Discount.Infrastructure.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Discount\Discount.Infrastructure\bin\Debug\net10.0\Discount.Application.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Discount\Discount.Infrastructure\bin\Debug\net10.0\Discount.Core.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Discount\Discount.Infrastructure\bin\Debug\net10.0\Discount.Application.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Discount\Discount.Infrastructure\bin\Debug\net10.0\Discount.Core.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Discount\Discount.Infrastructure\obj\Debug\net10.0\Discount.Infrastructure.csproj.AssemblyReference.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Discount\Discount.Infrastructure\obj\Debug\net10.0\Discount.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Discount\Discount.Infrastructure\obj\Debug\net10.0\Discount.Infrastructure.AssemblyInfoInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Discount\Discount.Infrastructure\obj\Debug\net10.0\Discount.Infrastructure.AssemblyInfo.cs
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Discount\Discount.Infrastructure\obj\Debug\net10.0\Discount.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Discount\Discount.Infrastructure\obj\Debug\net10.0\Discount.DF031D83.Up2Date
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Discount\Discount.Infrastructure\obj\Debug\net10.0\Discount.Infrastructure.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Discount\Discount.Infrastructure\obj\Debug\net10.0\refint\Discount.Infrastructure.dll
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Discount\Discount.Infrastructure\obj\Debug\net10.0\Discount.Infrastructure.pdb
+D:\Development(imp)\CURRENT\IMPIMP\Udemy-course-code\New\My-code\ECommerce Project\Ecommerce\Services\Discount\Discount.Infrastructure\obj\Debug\net10.0\ref\Discount.Infrastructure.dll

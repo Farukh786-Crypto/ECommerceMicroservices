@@ -1,0 +1,16 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "ApiGateway | v1",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://localhost:55180"
+    },
+    {
+      "url": "http://localhost:55182"
+    }
+  ],
+  "paths": { }
+}
