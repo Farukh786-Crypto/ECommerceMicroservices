@@ -821,5 +821,202 @@ Gateway:
 
 "API Gateway acts as a single entry point in microservices architecture that handles routing, authentication, rate limiting, and logging, making the system secure, scalable, and easier to manage."
 
+------------------------------------------------------------------------------------------------------------------------------------------------------
+# gRPC in Microservices – Interview Notes
+
 ---
+
+## 📌 What is gRPC?
+
+gRPC (Google Remote Procedure Call) is a high-performance communication protocol used for communication between microservices.
+
+* Developed by Google
+* Uses HTTP/2
+* Uses Protocol Buffers (Protobuf) instead of JSON
+* Faster than REST APIs
+
+---
+
+## 📌 Why use gRPC?
+
+* High performance (binary data)
+* Low latency
+* Strongly typed contracts
+* Supports streaming
+* Ideal for microservices communication
+
+---
+
+## 📌 REST vs gRPC
+
+| Feature     | REST               | gRPC                     |
+| ----------- | ------------------ | ------------------------ |
+| Protocol    | HTTP/1.1           | HTTP/2                   |
+| Data Format | JSON               | Protobuf (binary)        |
+| Performance | Slower             | Faster                   |
+| Contract    | No strict contract | Strong contract (.proto) |
+| Streaming   | Limited            | Built-in                 |
+
+---
+
+## 📌 How gRPC Works
+
+1. Define service in `.proto` file
+2. Generate server & client code
+3. Client calls method like local function
+4. gRPC handles communication
+
+---
+
+## 📌 gRPC Architecture
+
+Client → gRPC Client Stub → Network → gRPC Server → Service Implementation
+
+---
+
+## 📌 PROTO FILE (IMPORTANT)
+
+Example: product.proto
+
+```proto
+syntax = "proto3";
+
+option csharp_namespace = "Catalog.Grpc";
+
+service ProductProtoService {
+  rpc GetProduct (GetProductRequest) returns (ProductResponse);
+}
+
+message GetProductRequest {
+  string id = 1;
+}
+
+message ProductResponse {
+  string id = 1;
+  string name = 2;
+  double price = 3;
+}
+```
+
+---
+
+## 📌 SERVER IMPLEMENTATION (.NET)
+
+```csharp
+public class ProductService : ProductProtoService.ProductProtoServiceBase
+{
+    public override async Task<ProductResponse> GetProduct(
+        GetProductRequest request, ServerCallContext context)
+    {
+        // Simulate DB call
+        var product = new ProductResponse
+        {
+            Id = request.Id,
+            Name = "Laptop",
+            Price = 50000
+        };
+
+        return await Task.FromResult(product);
+    }
+}
+```
+
+---
+
+## 📌 REGISTER gRPC IN Program.cs
+
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddGrpc();
+
+var app = builder.Build();
+
+app.MapGrpcService<ProductService>();
+
+app.MapGet("/", () => "gRPC server running");
+
+app.Run();
+```
+
+---
+
+## 📌 CLIENT IMPLEMENTATION (.NET)
+
+```csharp
+var channel = GrpcChannel.ForAddress("https://localhost:5001");
+
+var client = new ProductProtoService.ProductProtoServiceClient(channel);
+
+var request = new GetProductRequest { Id = "1" };
+
+var response = await client.GetProductAsync(request);
+
+Console.WriteLine(response.Name);
+```
+
+---
+
+## 📌 TYPES OF gRPC COMMUNICATION
+
+1. Unary (Request → Response) ✅ most common
+2. Server Streaming (1 request → multiple responses)
+3. Client Streaming (multiple requests → 1 response)
+4. Bidirectional Streaming (both sides stream)
+
+---
+
+## 📌 WHEN TO USE gRPC?
+
+* Microservices internal communication
+* High performance systems
+* Real-time streaming
+* Backend-to-backend communication
+
+---
+
+## 📌 WHEN NOT TO USE gRPC?
+
+* Browser-based frontend (limited support)
+* Public APIs (REST preferred)
+* Simple CRUD apps
+
+---
+
+## 📌 ADVANTAGES
+
+* Fast and efficient
+* Strong typing
+* Code generation
+* Built-in streaming
+* Less bandwidth usage
+
+---
+
+## 📌 DISADVANTAGES
+
+* Harder to debug (binary format)
+* Not human-readable (unlike JSON)
+* Limited browser support
+* Learning curve
+
+---
+
+## 📌 gRPC in Your Project (IMPORTANT)
+
+Example:
+
+* Basket Service → calls Discount Service using gRPC
+
+Flow:
+Basket API → gRPC Client → Discount gRPC Server → Response
+
+---
+
+## 📌 Interview One-Liner
+
+"gRPC is a high-performance RPC framework that uses HTTP/2 and Protocol Buffers for fast and efficient communication between microservices."
+
+---
+
 
