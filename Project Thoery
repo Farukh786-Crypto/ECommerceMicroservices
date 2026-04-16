@@ -1017,6 +1017,355 @@ Basket API → gRPC Client → Discount gRPC Server → Response
 
 "gRPC is a high-performance RPC framework that uses HTTP/2 and Protocol Buffers for fast and efficient communication between microservices."
 
+------------------------------------------------------------------------------------------------------------------------------------------------------
+# RabbitMQ, Saga Pattern & Outbox Pattern – Interview Notes
+
+---
+
+# 🐰 1. RabbitMQ in Microservices
+
+## 📌 What is RabbitMQ?
+
+RabbitMQ is a message broker used for **asynchronous communication** between microservices.
+
+* Based on AMQP protocol
+* Uses Queue system
+* Decouples services
+
+---
+
+## 📌 Why RabbitMQ?
+
+* Avoid direct service-to-service calls
+* Improves scalability
+* Reliable message delivery
+* Supports async processing
+
+---
+
+## 📌 Architecture
+
+Producer → Exchange → Queue → Consumer
+
+---
+
+## 📌 Your Project Flow (IMPORTANT)
+
+Basket Service → sends event → RabbitMQ → Order Service consumes
+
+Example:
+User Checkout → Basket Service → Publish Event → Order Service creates order
+
+---
+
+## 📌 EVENT CONTRACT (Shared Library)
+
+```csharp id="ev1"
+public class BasketCheckoutEvent
+{
+    public string UserName { get; set; }
+    public decimal TotalPrice { get; set; }
+}
+```
+
+---
+
+## 📌 PRODUCER (Basket Service)
+
+```csharp id="ev2"
+public async Task Checkout(BasketCheckoutEvent eventMessage)
+{
+    await _publishEndpoint.Publish(eventMessage);
+}
+```
+
+---
+
+## 📌 CONSUMER (Order Service)
+
+```csharp id="ev3"
+public class BasketCheckoutConsumer : IConsumer<BasketCheckoutEvent>
+{
+    public async Task Consume(ConsumeContext<BasketCheckoutEvent> context)
+    {
+        var message = context.Message;
+
+        // Create Order
+        Console.WriteLine($"Order created for {message.UserName}");
+    }
+}
+```
+
+---
+
+## 📌 REGISTER RABBITMQ (MassTransit)
+
+```csharp id="ev4"
+builder.Services.AddMassTransit(config =>
+{
+    config.AddConsumer<BasketCheckoutConsumer>();
+
+    config.UsingRabbitMq((ctx, cfg) =>
+    {
+        cfg.Host("rabbitmq://localhost");
+
+        cfg.ReceiveEndpoint("basketcheckout-queue", e =>
+        {
+            e.ConfigureConsumer<BasketCheckoutConsumer>(ctx);
+        });
+    });
+});
+```
+
+---
+
+## 📌 Advantages
+
+* Async communication
+* Loose coupling
+* Scalable
+* Reliable messaging
+
+---
+
+## 📌 Interview One-Liner
+
+"RabbitMQ enables asynchronous, decoupled communication between microservices using message queues."
+
+---
+
+# 🔁 2. Saga Pattern
+
+## 📌 What is Saga Pattern?
+
+Saga is used to manage **distributed transactions** across multiple microservices.
+
+Instead of one DB transaction:
+➡️ Multiple local transactions + rollback (compensation)
+
+---
+
+## 📌 Why Needed?
+
+In microservices:
+
+* No single database
+* Cannot use traditional transactions
+
+---
+
+## 📌 Your Project Example
+
+Order Flow:
+
+1. Order Created ✅
+2. Payment Processed ✅
+3. If Payment Failed ❌ → Cancel Order
+
+---
+
+## 📌 FLOW
+
+Order Service → Payment Service → Response
+
+---
+
+## 📌 EVENT DEFINITIONS
+
+```csharp id="sg1"
+public class OrderCreatedEvent
+{
+    public Guid OrderId { get; set; }
+}
+
+public class PaymentFailedEvent
+{
+    public Guid OrderId { get; set; }
+}
+```
+
+---
+
+## 📌 PAYMENT CONSUMER
+
+```csharp id="sg2"
+public class OrderCreatedConsumer : IConsumer<OrderCreatedEvent>
+{
+    public async Task Consume(ConsumeContext<OrderCreatedEvent> context)
+    {
+        // Simulate payment failure
+        bool paymentSuccess = false;
+
+        if (!paymentSuccess)
+        {
+            await context.Publish(new PaymentFailedEvent
+            {
+                OrderId = context.Message.OrderId
+            });
+        }
+    }
+}
+```
+
+---
+
+## 📌 COMPENSATION (Order Cancel)
+
+```csharp id="sg3"
+public class PaymentFailedConsumer : IConsumer<PaymentFailedEvent>
+{
+    public async Task Consume(ConsumeContext<PaymentFailedEvent> context)
+    {
+        // Cancel Order
+        Console.WriteLine($"Order {context.Message.OrderId} Cancelled");
+    }
+}
+```
+
+---
+
+## 📌 Types of Saga
+
+1. Choreography (Event-based) ✅ (you are using this)
+2. Orchestration (Central controller)
+
+---
+
+## 📌 Advantages
+
+* Handles distributed transactions
+* Fault tolerance
+* Event-driven
+
+---
+
+## 📌 Interview One-Liner
+
+"Saga pattern manages distributed transactions using a sequence of local transactions and compensating actions."
+
+---
+
+# 📦 3. Outbox Pattern
+
+## 📌 What is Outbox Pattern?
+
+Ensures **data consistency between database and message broker**.
+
+Problem:
+❌ DB saved but event not published
+❌ Event published but DB failed
+
+Solution:
+✅ Store event in DB first → then publish
+
+---
+
+## 📌 How It Works
+
+1. Save data + event in DB (same transaction)
+2. Background service reads events
+3. Publishes to RabbitMQ
+4. Marks event as processed
+
+---
+
+## 📌 OUTBOX TABLE
+
+```csharp id="ob1"
+public class OutboxMessage
+{
+    public Guid Id { get; set; }
+    public string EventType { get; set; }
+    public string Payload { get; set; }
+    public bool Processed { get; set; }
+}
+```
+
+---
+
+## 📌 SAVE DATA + EVENT
+
+```csharp id="ob2"
+public async Task SaveOrder(Order order)
+{
+    _dbContext.Orders.Add(order);
+
+    var outbox = new OutboxMessage
+    {
+        Id = Guid.NewGuid(),
+        EventType = "OrderCreated",
+        Payload = JsonConvert.SerializeObject(order),
+        Processed = false
+    };
+
+    _dbContext.OutboxMessages.Add(outbox);
+
+    await _dbContext.SaveChangesAsync();
+}
+```
+
+---
+
+## 📌 BACKGROUND SERVICE
+
+```csharp id="ob3"
+public class OutboxProcessor : BackgroundService
+{
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    {
+        while (!stoppingToken.IsCancellationRequested)
+        {
+            var messages = _dbContext.OutboxMessages
+                .Where(x => !x.Processed)
+                .ToList();
+
+            foreach (var msg in messages)
+            {
+                await _publishEndpoint.Publish(msg.Payload);
+
+                msg.Processed = true;
+            }
+
+            await _dbContext.SaveChangesAsync();
+            await Task.Delay(5000);
+        }
+    }
+}
+```
+
+---
+
+## 📌 Advantages
+
+* Prevents data inconsistency
+* Reliable messaging
+* Works with RabbitMQ
+
+---
+
+## 📌 Interview One-Liner
+
+"Outbox pattern ensures reliable event publishing by storing events in the database and processing them asynchronously."
+
+---
+
+# 🔥 FINAL SUMMARY (IMPORTANT FOR INTERVIEW)
+
+* RabbitMQ → async communication
+* Saga → distributed transaction management
+* Outbox → reliable event publishing
+
+---
+
+## 📌 Real Project Flow (Your Case)
+
+1. Basket Checkout
+2. Publish Event (RabbitMQ)
+3. Order Created
+4. Payment Process
+5. If Failed → Saga rollback
+6. Outbox ensures no data loss
+
 ---
 
 
