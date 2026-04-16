@@ -675,3 +675,151 @@ No Order Created
 → Dispatcher finds 0 pending messages
 → OrderCreatedEvent NOT published
 → Payment consumer NOT triggered
+--------------------------------------------------------------------------------------------
+# API Gateway in Microservices – Interview Notes
+
+## 📌 What is API Gateway?
+
+API Gateway is a single entry point for all client requests in a microservices architecture.
+It routes requests to appropriate backend services and handles cross-cutting concerns.
+
+Example: Ocelot (.NET API Gateway)
+
+---
+
+## 📌 Why API Gateway is Needed?
+
+In microservices, we have multiple services like:
+
+* Catalog Service
+* Basket Service
+* Order Service
+* Identity Service
+
+Without API Gateway:
+
+* Client must call each service separately
+* Multiple URLs and ports exposed
+* Security issues
+* Hard to maintain
+
+With API Gateway:
+
+* Single entry point (e.g., http://localhost:8010)
+* All requests go through one place
+
+---
+
+## 📌 Key Responsibilities of API Gateway
+
+### 1. Routing
+
+* Routes incoming request to correct microservice
+* Example:
+  /Catalog → Catalog Service
+  /Basket → Basket Service
+
+---
+
+### 2. Authentication & Authorization
+
+* Validates JWT token at gateway level
+* No need to implement auth in every service
+* Improves security and reduces duplication
+
+---
+
+### 3. Rate Limiting
+
+* Limits number of requests per client
+* Prevents abuse and DDoS attacks
+* Example:
+  5 requests per 10 seconds
+
+---
+
+### 4. Load Balancing
+
+* Distributes requests across multiple instances
+* Helps in scalability
+
+---
+
+### 5. Logging & Monitoring
+
+* Central place for logging
+* Uses correlation ID to track requests across services
+
+---
+
+### 6. Response Aggregation (Advanced)
+
+* Combines data from multiple services into one response
+* Example:
+  Dashboard → Catalog + Order + Basket data
+
+---
+
+## 📌 Advantages of API Gateway
+
+* Single entry point
+* Improved security
+* Centralized configuration
+* Simplified client-side logic
+* Better monitoring and logging
+* Supports scaling
+
+---
+
+## 📌 Disadvantages
+
+* Single point of failure (if not handled properly)
+* Adds extra latency
+* Needs proper configuration
+
+---
+
+## 📌 Real-World Usage
+
+Used by large companies:
+
+* Amazon
+* Netflix
+* Swiggy
+
+They never expose microservices directly to clients.
+
+---
+
+## 📌 API Gateway in Your Project
+
+Current Setup:
+Angular → Ocelot Gateway → Microservices
+
+Ports:
+
+* Catalog → 8000
+* Basket → 8001
+* Order → 8003
+
+Gateway:
+
+* Runs on port 8010
+* Routes all requests
+
+---
+
+## 📌 API Gateway with Kubernetes
+
+* Works with Ingress
+* Handles external traffic
+* Services communicate internally via service names
+
+---
+
+## 📌 Interview One-Liner
+
+"API Gateway acts as a single entry point in microservices architecture that handles routing, authentication, rate limiting, and logging, making the system secure, scalable, and easier to manage."
+
+---
+
