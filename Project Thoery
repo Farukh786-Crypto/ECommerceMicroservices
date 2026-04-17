@@ -1,4 +1,6 @@
-
+user added data in basket  =redis
+user applies coupon wait for discount = GRPC
+user click checkout  = Rabbit MQ send event payment service
 section 9 is incomplete
 
 docker-compose up --build -d
@@ -1685,7 +1687,28 @@ Basket Service
 
 🔥 This is **exact real-world architecture** — if you explain this clearly, you will stand out in interviews.
 
----
+-------------------------------------------------------------------------------------------------------------------------------
+Repository Pattern introduces an abstraction layer between the controller (or service) and the data access layer.”
 
+It acts as a middle layer
+Encapsulates all database operations
+Communicates via interfaces (contracts)
+
+Why Interface?
+
+👉 You mentioned this — just refine it:
+
+👉 “We use interfaces to define contracts so that controllers/services don’t depend on concrete implementations.”
+
+Benefits:
+
+Loose coupling
+Easy unit testing (mock repository)
+Flexibility to change implementation
+
+
+Repository Pattern is used to create an abstraction layer between the data access logic and the business logic. Instead of directly using DbContext in controllers,
+we use repositories that encapsulate all database operations. This improves separation of concerns, 
+makes the code loosely coupled, and helps in unit testing by using interfaces.
 
 
