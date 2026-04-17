@@ -26,6 +26,7 @@ docker system prune -a --volumes -f
 for migration
 D:\Development(imp)\CURRENT\github(latest)\ECommerce\Services\Ordering>dotnet ef migrations add InitialCreate -p Ordering.Infrastructure -s Ordering.API -c OrderContext
 or you can go to package manager console -> default project : ordering.Infrastructure and run 
+
 add migration and update database command
 Note: project run must be order while run this above command
 
@@ -1710,5 +1711,87 @@ Flexibility to change implementation
 Repository Pattern is used to create an abstraction layer between the data access logic and the business logic. Instead of directly using DbContext in controllers,
 we use repositories that encapsulate all database operations. This improves separation of concerns, 
 makes the code loosely coupled, and helps in unit testing by using interfaces.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+									Design Patteren
+Is Unit of Work a Transaction?
+Answer: "Unit of Work manages a transaction. It ensures that all repositories share the same transaction boundary so that SaveChanges() is atomic."
+
+Is SAGA the same as a SQL Transaction?
+Answer: "No. A SQL Transaction is ACID (Atomic, Consistent, Isolated, Durable). A SAGA follows BASE (Basic Availability, Soft state, Eventual consistency). 
+
+
+
+To understand why the Factory is useful here, you have to see the "Messy Code" that we are hiding inside the Factory.
+
+Imagine your application supports PayPal, Stripe, and Credit Cards. Without a factory, your Controller would be full of if/else or switch statements, making it hard to maintain.
+
+1. The Interface and Concrete Classes
+First, we define what a "Payment Provider" does.
+
+C#
+public interface IPaymentProvider 
+{
+    void Process();
+}
+
+public class PayPalProvider : IPaymentProvider 
+{
+    public void Process() => Console.WriteLine("Processing PayPal payment...");
+}
+
+public class StripeProvider : IPaymentProvider 
+{
+    public void Process() => Console.WriteLine("Processing Stripe payment...");
+}
+2. The Factory Implementation
+This is the heart of the pattern. The Factory "encapsulates" the decision-making logic.
+
+C#
+public interface IPaymentFactory 
+{
+    IPaymentProvider GetPaymentProvider(string type);
+}
+
+public class PaymentFactory : IPaymentFactory
+{
+    // The Factory handles the "New" keyword so the Controller doesn't have to
+    public IPaymentProvider GetPaymentProvider(string type)
+    {
+        return type.ToLower() switch
+        {
+            "paypal" => new PayPalProvider(),
+            "stripe" => new StripeProvider(),
+            _ => throw new NotImplementedException("Payment method not supported")
+        };
+    }
+}
+3. Why is this better? (The Interview Answer)
+If you didn't have the Factory, your Controller would look like this:
+
+C#
+// BAD PRACTICE: Tight Coupling
+if (type == "paypal") {
+    var p = new PayPalProvider();
+    p.Process();
+} else if (type == "stripe") {
+    var s = new StripeProvider();
+    s.Process();
+}
+Why the Factory wins:
+Open/Closed Principle: If you add a new payment method (e.g., GooglePay), you only add a new class and one line in the Factory. You never touch the Controller.
+
+Cleanliness: The Controller only knows about the interface IPaymentProvider. It doesn't care how the object is created or which specific class it is.
+
+Unit Testing: You can easily "Mock" the factory in your tests to return a fake provider, which is much harder to do if you are using the new keyword inside the Controller.
+
+4. How to Register it in Program.cs
+Even though the Factory creates objects, the Factory itself is a service that needs to be injected.
+
+C#
+builder.Services.AddScoped<IPaymentFactory, PaymentFactory>();
+SAGA is for when you cannot use a standard transaction because the data is in different places."
+
+In your Clean Architecture project, you use DI to get the PaymentFactory into your Controller, but you use the Factory to decide at runtime (based on the user's input) which specific payment class to build.
 
 
