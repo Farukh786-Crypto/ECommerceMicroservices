@@ -1,0 +1,730 @@
+sect	ion 9 is incomplete
+
+docker-compose up --build -d
+docker-compose down
+docker compose build --no-cache
+docker ps -a
+docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
+docker compose logs discountdb
+
+if you perform some changes
+docker compose down -v      (delet volumes)
+docker compose up --build
+
+
+after donr changes in locally visual studio
+
+docker compose down -v
+docker system prune -a
+docker compose build --no-cache
+docker compose up
+
+
+------------------------------------
+for migration
+D:\Development(imp)\CURRENT\github(latest)\ECommerce\Services\Ordering>dotnet ef migrations add InitialCreate -p Ordering.Infrastructure -s Ordering.API -c OrderContext
+
+------------------------------------
+farukh44921
+
+---------------
+
+http://localhost:9090/#!/init/admin
+portainer
+username : admin
+password :Sumasoft@12345
+
+------------------------------
+section 30 start for angular..............................
+
+---------------------------------------------------------------------------
+CQRS = Command Query Responsibility Segregation
+
+Meaning:
+
+Commands = change data (Create, Update, Delete)
+
+Queries = read data (Get something)
+
+We keep them separate because:
+
+Command logic is complex (validation, domain rules, saving)
+
+Query logic is optimized for fast reading
+
+📌 So CQRS segregates read and write responsibilities.
+
+
+MediatR helps us send commands or queries to the correct handler without knowing who handles it.
+------------------------------------------------------------------------------------------------
+In your architecture:
+API
+ ↓
+Controller
+ ↓
+MediatR Pipeline
+ ↓
+FluentValidation  ✅
+ ↓
+Command Handler
+ ↓
+Database / EventBus
+
+
+💡 Validation runs BEFORE the command handler.
+
+If validation fails:
+
+Handler is never executed
+
+No DB changes
+
+No event published
+-------------------------------------------------------------------------
+Why Event is REQUIRED in Microservices
+Golden Rule:
+
+Services must not know who consumes their data
+
+Basket service:
+
+Does NOT care about:
+
+Ordering
+
+Payment
+
+Inventory
+
+It only says:
+👉 “Checkout happened”
+-------------------------------------------------------------------------
+Full End-to-End Scenario (REAL WORLD)
+🛒 Step 1: User clicks “Checkout”
+
+Frontend:
+
+POST /api/basket/checkout
+
+🧺 Step 2: Basket.API
+await _publishEndpoint.Publish(eventMsg);
+
+
+What Basket service does:
+✔ Calculates price
+✔ Publishes event
+✔ Deletes basket
+✔ Returns 202 Accepted
+
+💡 Basket service is DONE.
+
+🐰 Step 3: RabbitMQ (Message Broker)
+
+RabbitMQ:
+
+Stores message
+
+Guarantees delivery
+
+Decouples services
+
+BasketCheckoutEventV2
+
+📦 Step 4: Ordering.API consumes event
+public class BasketOrderingConsumerV2 
+    : IConsumer<BasketCheckoutEventV2>
+
+
+📌 Ordering reacts to event
+📌 No direct call from Basket
+
+🧠 Step 5: Event → Command
+var cmd = _mapper.Map<CheckoutOrderCommandV2>(context.Message);
+await _mediator.Send(cmd);
+
+
+Why command?
+
+Internal business logic
+
+Validation
+
+DB access
+
+🧾 Step 6: Order created
+
+Order saved in DB
+
+Payment process can start
+
+Email service can listen too (future)
+
+Why Event Versioning (V2)?
+
+Your:
+
+BasketCheckoutEventV2
+
+Why?
+
+Contract change
+
+Add/remove fields
+
+Backward compatibility
+
+Old consumers → V1
+New consumers → V2
+
+8️⃣ Event vs Command (CRITICAL DIFFERENCE)
+Event	Command
+Something happened	Do something
+Past tense	Imperative
+Broadcast	Single handler
+Async	Can be sync
+Integration	Internal
+
+✔ Your design respects this perfectly.
+
+9️⃣ Why Nullable in Event?
+public string? UserName { get; set; }
+
+
+Because:
+
+External contract
+
+Defensive programming
+
+Validation happens later
+
+🔟 Why this is PROFESSIONAL architecture
+
+You are using:
+✔ Clean Architecture
+✔ CQRS
+✔ Event-Driven Microservices
+✔ Async Messaging
+✔ Versioned Contracts
+
+This is exactly how enterprise systems are built.
+
+-----------------------------------------------------------------------
+section 1 to section 9  - API
+section 28 onwards Angular
+
+
+tax simulator =
+taxsable income + 21,600 = total
+total/12
+then minus 4000
+
+-----------------------------
+
+D:\Development(imp)\CURRENT\github(latest)
+
+----------------------------------------------------------------------------------------------------------------------
+http://localhost:8001/swagger/index.html
+Adidas Quick Force Indoor Badminton Shoes
+
+
+-----------------------------
+
+
+
+Basket → BasketCheckoutEvent
+              ↓
+        RabbitMQ Queue
+              ↓
+        Ordering Service
+		
+		
+RabbitMQ is low-level.
+
+MassTransit is a .NET abstraction over RabbitMQ.
+
+MassTransit gives you:
+
+✔ Automatic queue creation
+✔ Retries
+✔ Dead-letter queues
+✔ Serialization
+✔ Dependency injection
+✔ Consumer lifecycle
+
+Think of it as:
+
+“ASP.NET Core for messaging”
+
+COMPLETE FLOW (READ SLOWLY)
+1. User clicks "Checkout"
+2. Basket Service publishes BasketCheckoutEventV2
+3. RabbitMQ stores message
+4. Ordering Service consumer receives event
+5. Consumer maps Event → Command
+6. MediatR sends command
+7. Validation runs
+8. Handler saves Order
+9. Success → ACK to RabbitMQ
+
+
+
+--------------------------------------------
+If a basket is created using V1,
+V2 Checkout SHOULD be able to read the same basket
+because both use the same Redis storage.
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+					Payload 
+
+Request URL
+http://localhost:8001/api/v1/Basket/CreateBasket
+
+{
+  "userName": "rahul",
+  "items": [
+    {
+      "quantity": 2,
+      "price": 3500,
+      "productId": "602d2149e773f2a3990b47f5",
+      "imageFile": "images/products/adidas_shoe-1.png",
+      "productName": "Adidas Quick Force Indoor Badminton Shoes"
+    }
+  ]
+}
+
+
+
+http://localhost:8001/api/v1/Basket/Checkout
+
+{
+  "userName": "rahul",
+  "totalPrice": 0,
+  "firstName": "Rahul",
+  "lastName": "Sahay",
+  "emailAddress": "rahul@ecommerce.net",
+  "addressLine": "abc",
+  "country": "India",
+  "state": "Jharkhand",
+  "zipCode": "834009",
+  "cardName": "visa",
+  "cardNumber": "1234567890",
+  "expiration": "12/26",
+  "cvv": "123",
+  "paymentMethod": 1
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+							----------------------------------  Azure ----------------------------------
+							
+1> always delete subscription and resource group while shutting down 
+
+IAAS = VM
+PASS = app service (developer)
+SAAS = purchased tally or microdft 365
+
+IaaS → I manage OS
+PaaS → I manage code
+SaaS → I just use software
+
+
+1> Disaster Recovery : 
+1> Fault tolerence   = when natural climaty happpen if user want zero fault tolerence meaning that after natural climaty happen still user want our application
+ run smothlly now down for 1 second also it is called zero fault tolerence . 
+ technically when one machine run other machine also run same replicate in this machine also
+ 
+ What is Azure Load Balancer?
+
+Azure Load Balancer is a Layer-4 (TCP/UDP) load balancing service that distributes incoming network traffic
+across multiple backend resources such as Virtual Machines 
+or VM Scale Sets to ensure high availability, fault tolerance, and performance.
+
+
+“How would you design a highly available Web API in Azure?”
+
+✔ Answer:
+
+“I would deploy the API on multiple VMs or VM scale sets inside availability zones and place an Azure Load Balancer in front. 
+The load balancer will distribute incoming requests and use health probes to route traffic only to healthy instances.”
+
+
+
+Situation									Concept
+
+One VM fails								Fault tolerance
+Users don’t feel downtime					High availability  (multiple VM is create at same time)
+Users increase								Scalability
+Traffic auto adjusts						Elasticity
+Need fast setup								Agility
+Entire region fails							Disaster recovery
+
+
+
+
+How to delete subscription
+first delete Recovery Services vault then click to the vault go to the left side and click to the setting then go the properties
+then Soft Delete Settings update to disabled then save it then you can disable subscription
+
+Notes:  first build  application then publish
+step 1> while running first application of asp.net core 8.0 web api in programs.cs you need to done following code
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseSwagger(); // add outside Environment
+app.UseSwaggerUI();
+
+
+step 2> azuresubasp.azurewebsites.net/swagger/index.html
+  -- add swagger/index.html
+  
+  
+
+
+When we create Sql server and inside create databse after create database when we want to connect to ssms that time we get error
+to resolve this we need to go azure sql server or database and set firewall inside this we have then click to
++ Add your client IPv4 address then save it  
+ 
+  sql server
+  
+  server name = questserver
+  shiv
+  Kumar@123
+  databse name  =questdb
+  
+  ------------------------------------------------------
+  
+  Functions Apps
+  
+  
+  1> website should be run 24/7 that why App service is required but if we want to run batch file it will run after particular time like clean code logic
+  run should be in the week or backup we required function app , logic app it is piece of code which run online which it build only on that time function app run then it is not required
+  i.e serverless
+  
+  for jobs
+  Logic  app  = workflow
+  function app = only c# code of functions
+  
+  Web job runs continously
+  create function  - > step 1 > go to the azure function in visual studio
+  
+  
+  localhost:7281/api/Function1?name="Farukh"
+  
+    Function1: [GET,POST] http://localhost:7281/api/Function1
+	
+	
+
+	
+	mystoragefuncappnew
+	containernew123
+	
+	DefaultEndpointsProtocol=https;AccountName=mystorageaccquest;AccountKey=1dpW955k7xJb6GXIRA64u9RpG4ftNxPdbfgz1xlXMPh6UqxfZTNvswTnAqwBb8RGh8FU0YCrQjei+ASt9PLDpQ==;EndpointSuffix=core.windows.net
+	
+	
+	Function chaining 
+	
+	   one function called another functions through orchestration 
+	   function 1 called then go the orchestration then called second function but they are stateless to maintain they are store in table 
+	   
+	   -------------------
+☁️ 1. Public Cloud (Azure Public Cloud)
+What it is:
+
+Azure provides shared infrastructure over the internet.
+
+Azure examples:
+
+Azure Virtual Machines
+
+Azure App Service
+
+Azure SQL Database
+
+Azure Blob Storage
+
+Characteristics:
+
+Multi-tenant
+
+Pay-as-you-go
+
+Managed by Microsoft
+
+Use cases:
+
+Web applications
+
+Startups
+
+Dev/Test environments
+
+📌 Interview line:
+
+“Public cloud resources are owned and managed by Microsoft and shared across multiple customers with logical isolation.”
+
+🏢 2. Private Cloud (Azure Stack / On-Prem)
+What it is:
+
+Cloud infrastructure dedicated to one organization.
+
+Azure options:
+
+Azure Stack Hub
+
+Azure Stack HCI
+
+On-premises data center
+
+Characteristics:
+
+Single-tenant
+
+Full control
+
+Higher cost
+
+Use cases:
+
+Banking
+
+Government
+
+Sensitive data
+
+📌 Interview line:
+
+“Private cloud provides dedicated infrastructure with higher security and compliance requirements.”
+
+🔗 3. Hybrid Cloud (Most companies use this)
+What it is:
+
+Combination of on-premises + Azure public cloud.
+
+Azure hybrid services:
+
+Azure VPN Gateway
+
+Azure ExpressRoute
+
+Azure Arc
+
+Azure AD (Entra ID)
+
+How it works:
+
+Sensitive data stays on-prem
+
+Scalable workloads run on Azure
+
+Use cases:
+
+Legacy applications
+
+Gradual cloud migration
+
+Disaster recovery
+
+📌 Interview line:
+
+“Hybrid cloud allows organizations to integrate on-premises infrastructure with Azure services for flexibility and scalability.”
+
+
+
+-------------------------------------------------------------------
+Questpond link
+
+https://questpond.teachable.com/courses/714362/lectures/12841798
+
+https://questpond.teachable.com/courses/722425/lectures/13038167
+
+https://questpond.teachable.com/courses/2748052/lectures/60198323
+
+https://questpond.teachable.com/courses/715978/lectures/12873749
+
+https://questpond.teachable.com/courses/angular-training-recordings-in-progress/lectures/54858287
+
+https://questpond.teachable.com/courses/716078/lectures/12875281
+
+https://questpond.teachable.com/courses/718678/lectures/12925661
+
+https://questpond.teachable.com/courses/882636/lectures/16115246
+
+https://questpond.teachable.com/courses/712251/lectures/12802035
+
+https://questpond.teachable.com/courses/azure-crash-course-for-developers-ongoing-2025/lectures/61725033
+
+https://questpond.teachable.com/courses/719499/lectures/30132098
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+Article
+
+https://medium.com/net-core/in-memory-distributed-redis-caching-in-asp-net-core-62fb33925818?source=publication_content_feed----9864284e8ea3-----2-----------------------------------
+
+----------------
+
+using AutoMapper;
+using Basket.Application.Commands;
+using Basket.Application.GrpcService;
+using Basket.Application.Responses;
+using Basket.Core.Entities;
+using Basket.Core.Repositories;
+using MediatR;
+
+namespace Basket.Application.Handlers
+{
+    public class CreateShoppingCartCommandHandler : IRequestHandler<CreateShoppingCartCommand, ShoppingCartResponse>
+    {
+        private readonly IBasketRepository _basketRepository;
+        private readonly IMapper _mapper;
+        private readonly DiscountGrpcService _discountGrpcService;
+
+        public CreateShoppingCartCommandHandler(IBasketRepository basketRepository, IMapper mapper, DiscountGrpcService discountGrpcService)
+        {
+            _basketRepository = basketRepository;
+            _mapper = mapper;
+            _discountGrpcService = discountGrpcService;
+        }
+        public async Task<ShoppingCartResponse> Handle(CreateShoppingCartCommand request, CancellationToken cancellationToken)
+        {
+            foreach (var item in request.Items)
+            {
+                var coupon = await _discountGrpcService.GetDiscount(item.ProductName);
+                item.Price -= coupon.Amount;
+            }
+            var shoppingCart = await _basketRepository.UpdateBasket(new ShoppingCart { 
+                UserName = request.UserName,
+                Items = request.Items
+            });
+            var shoppingCartResponse = _mapper.Map<ShoppingCartResponse>(shoppingCart);
+            return shoppingCartResponse;
+        }
+    }
+}
+
+  public async Task<ShoppingCart> UpdateBasket(ShoppingCart shoppingCart)
+  {
+      await _redisCache.SetStringAsync(shoppingCart.UserName,JsonConvert.SerializeObject(shoppingCart));
+      return await GetBasket(shoppingCart.UserName);
+  }
+  
+  ---------------------------------------------------------------------------------------------------------------------
+  
+  import { HttpClient } from '@angular/common/http';
+import { inject, Injectable } from '@angular/core';
+import { IPagination } from '../shared/models/IPagination';
+import { IProduct } from '../shared/models/IProduct';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class StoreService {
+  private http = inject(HttpClient);
+  public baseUrl = 'http://localhost:8000/api/';
+
+  constructor() { }
+
+  getProducts() {
+    return this.http.get<IPagination<IProduct[]>>(`${this.baseUrl}Catalog/GetAllProducts`);
+  }
+}
+-------------------------------------------------------------------------------------------------------------
+store component
+
+import { CommonModule } from '@angular/common';
+import { Component, inject, OnInit } from '@angular/core';
+import { StoreService } from '../services/store';
+
+@Component({
+  selector: 'ecommerce-ui-storecomponent',
+  imports: [CommonModule],
+  providers: [StoreService],
+  templateUrl: './storecomponent.html',
+  styleUrl: './storecomponent.scss',
+})
+export class Storecomponent implements OnInit {
+  private storeService = inject(Storecomponent);
+
+
+
+  constructor() { }
+
+  ngOnInit(): void {
+    this.storeService.getProducts()
+  }
+}
+-----------------------------------------------------------------------
+
+
+ private async Task<IReadOnlyList<Product>> DataFilter(CatalogSpecParams catalogSpecParams, FilterDefinition<Product> filter)
+ {
+     switch (catalogSpecParams.Sort)
+     {
+         case "priceAsc":
+             return await _context
+                 .Products
+                 .Find(filter)
+                 .Sort(Builders<Product>.Sort.Ascending("Price"))
+                 .Skip(catalogSpecParams.PageSize * (catalogSpecParams.PageIndex - 1))
+                 .Limit(catalogSpecParams.PageSize)
+                 .ToListAsync();
+         case "priceDesc":
+             return await _context
+                 .Products
+                 .Find(filter)
+                 .Sort(Builders<Product>.Sort.Descending("Price"))
+                 .Skip(catalogSpecParams.PageSize * (catalogSpecParams.PageIndex - 1))
+                 .Limit(catalogSpecParams.PageSize)
+                 .ToListAsync();
+         default:
+             return await _context
+                 .Products
+                 .Find(filter)
+                 .Sort(Builders<Product>.Sort.Ascending("Name"))
+                 .Skip(catalogSpecParams.PageSize * (catalogSpecParams.PageIndex - 1))
+                 .Limit(catalogSpecParams.PageSize)
+                 .ToListAsync();
+     }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
